@@ -8,6 +8,8 @@ html {
 body {
   background-color: var(--background);
   margin: 0;
+  font-family: var(--font-sofia);
+  font-size: 14px;
 }
 
 *,
@@ -38,6 +40,7 @@ li {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 button {

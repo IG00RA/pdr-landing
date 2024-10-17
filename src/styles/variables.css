@@ -1,4 +1,8 @@
 :root {
   --background: #bbb6b6;
   --foreground: #171717;
+  --second-color: #f2b843;
+  --font-plus: 'M PLUS Rounded 1c', sans-serif;
+  --font-jura: 'Jura', sans-serif;
+  --font-sofia: 'Sofia Sans Extra Condensed', sans-serif;
 }
