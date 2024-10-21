@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: var(--font-sofia);
   font-size: 14px;
+  color: var(--main-text-color);
 }
 
 *,
@@ -40,7 +41,7 @@ li {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--main-text-color);
 }
 
 button {
@@ -49,6 +50,7 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  color: var(--main-text-color);
 }
 
 img {
