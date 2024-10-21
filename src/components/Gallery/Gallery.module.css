@@ -1,0 +1,146 @@
+.gallery {
+  width: 100%;
+  background-color: #000;
+  background: linear-gradient(40deg, #1c1c1c 29%, #000 30%);
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 200px;
+  padding-top: 50px;
+  padding-bottom: 120px;
+  position: relative;
+}
+
+.gallery_text {
+  font-family: var(--font-jura);
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.gallery_text::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: var(--second-color);
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+}
+
+.gallery_slider {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.slider_image {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.gallery_list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery_item {
+  cursor: pointer;
+  background-color: #1a1a1a75;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 5px;
+  transition: transform 0.3s ease, border-color 0.3s ease, fill 0.3s ease;
+}
+
+.gallery_item:hover {
+  border-color: var(--second-color);
+  box-shadow: inset 0 10px 20px var(--second-color-alfa);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 40px;
+  color: var(--second-color);
+  cursor: pointer;
+}
+
+.prev {
+  left: 125px;
+}
+
+.next {
+  right: 125px;
+}
+
+.prev:hover,
+.next:hover {
+  color: var(--second-color-alfa);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.pagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: var(--second-color);
+  opacity: 0.7;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.pagination .swiper-pagination-bullet-active {
+  background-color: var(--second-color-alfa);
+  opacity: 1;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modal_content {
+  position: relative;
+}
+
+.full_image {
+  max-width: 900px;
+  max-height: 800px;
+  object-fit: contain;
+  border-radius: 30px;
+}

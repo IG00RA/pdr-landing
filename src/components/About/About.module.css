@@ -11,7 +11,7 @@
 }
 
 .about_text {
-  font-family: var(--font-plus);
+  font-family: var(--font-jura);
   font-weight: 500;
   font-size: 45px;
   margin-bottom: 50px;
@@ -45,7 +45,7 @@
 .about_wrap {
   padding: 30px 200px;
   background-color: #1c1c1c;
-  box-shadow: 0 10px 20px #f2b8436b;
+  box-shadow: 0 10px 20px var(--second-color-alfa);
   position: relative;
   width: 1135px;
   border-radius: 20px;

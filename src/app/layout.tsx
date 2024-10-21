@@ -1,19 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '../styles/globals.css';
-import {
-  M_PLUS_Rounded_1c,
-  Jura,
-  Sofia_Sans_Extra_Condensed,
-} from 'next/font/google';
+
+import { Jura, Sofia_Sans_Extra_Condensed } from 'next/font/google';
 
 // Google fonts
-const mPlusRounded = M_PLUS_Rounded_1c({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-plus',
-});
-
 const jura = Jura({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
@@ -61,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="ua">
       <body
-        className={`${mPlusRounded.variable} ${jura.variable} ${sofiaSansExtraCondensed.variable} ${PFBaselinePro.variable}`}
+        className={`${jura.variable} ${sofiaSansExtraCondensed.variable} ${PFBaselinePro.variable}`}
       >
         {children}
       </body>

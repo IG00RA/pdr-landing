@@ -30,7 +30,7 @@
     color: white;
     text-transform: uppercase;
     font-size: 25px;
-    font-family: var(--font-plus);
+    font-family: var(--font-jura);
   }
   & .logo_text_large {
     font-size: 38px;
