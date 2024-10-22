@@ -13,30 +13,28 @@ import thirdImg from '../../img/gallery/3.jpg';
 import fourthImg from '../../img/gallery/4.jpg';
 import Icon from '@/helpers/Icon';
 
-const images = [firstImg, secondImg, thirdImg, fourthImg].map(
+const images: string[] = [firstImg, secondImg, thirdImg, fourthImg].map(
   image => image.src
 );
 
 export default function Gallery() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState('');
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [currentImage, setCurrentImage] = useState<string>('');
 
-  // Відкриття модального вікна з обраним зображенням
-  const openModal = image => {
+  const openModal = (image: string): void => {
     setCurrentImage(image);
     setIsOpen(true);
     document.body.style.overflow = 'hidden';
   };
 
-  // Закриття модального вікна
-  const closeModal = () => {
+  const closeModal = (): void => {
     setIsOpen(false);
     setCurrentImage('');
     document.body.style.overflow = 'auto';
   };
 
   useEffect(() => {
-    const handleEsc = event => {
+    const handleEsc = (event: KeyboardEvent): void => {
       if (event.key === 'Escape') {
         closeModal();
       }
@@ -74,7 +72,7 @@ export default function Gallery() {
             <SwiperSlide key={index} className={styles.gallery_item}>
               <img
                 src={image}
-                alt={`Slide ${index + 1}`}
+                alt={`Слайд ${index + 1}`}
                 className={styles.slider_image}
                 onClick={() => openModal(image)}
               />

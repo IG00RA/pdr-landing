@@ -1,9 +1,15 @@
 import About from '@/components/About/About';
+import Advantages from '@/components/Advantages/Advantages';
 import Features from '@/components/Features/Features';
 import Footer from '@/components/Footer/Footer';
 import Gallery from '@/components/Gallery/Gallery';
 import Header from '@/components/Header/Header';
 import Hero from '@/components/Hero/Hero';
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('../components/Map/Map'), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -14,6 +20,8 @@ export default function Home() {
         <Features />
         <About />
         <Gallery />
+        <Advantages />
+        <Map />
       </main>
       <Footer />
     </>

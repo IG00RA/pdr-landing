@@ -1,0 +1,87 @@
+.advantages {
+  width: 100%;
+  background-color: #000;
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.6082808123249299) 0%,
+      rgba(0, 0, 0, 0.711922268907563) 50%,
+      rgba(0, 0, 0, 0.8379726890756303) 100%
+    ),
+    url('../../img/hero/Repair.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+  padding: 40px 100px;
+}
+
+.advantages_text {
+  font-family: var(--font-jura);
+  font-weight: 500;
+  font-size: 45px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.advantages_list {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.advantages_item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 25px;
+}
+
+.advantages_item::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: var(--second-color);
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-top: 8px;
+}
+
+.advantages_wrap {
+  padding: 30px 200px;
+  background-color: #1c1c1c;
+  box-shadow: 0 10px 20px var(--second-color-alfa);
+  position: relative;
+  width: 1135px;
+  border-radius: 20px;
+}
+
+.advantages_wrap::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: 100px;
+  width: 10px;
+  height: 450px;
+  background-color: var(--second-color);
+}
+
+.advantages_par {
+  width: 1000px;
+  font-size: 20px;
+  padding: 0 40px 40px;
+}
+
+.advantages_par_header {
+  margin-bottom: 30px;
+  padding-left: 50px;
+  font-size: 25px;
+
+  font-style: var(--font-pro);
+}
