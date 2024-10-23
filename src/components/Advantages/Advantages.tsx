@@ -5,7 +5,7 @@ export default function Advantages() {
     <section className={styles.advantages}>
       <div className={styles.container}>
         <h3 className={styles.advantages_par_header}>
-          Переваги видалення вм'ятин без необхідності фарбування:
+          Переваги видалення вм&apos;ятин без необхідності фарбування:
         </h3>
         <ul className={styles.advantages_list}>
           <li className={styles.advantages_item}>
@@ -38,8 +38,8 @@ export default function Advantages() {
           </li>
           <li className={styles.advantages_item}>
             <p>
-              авто зберігає статус "нефарбоване", що позитивно впливає на його
-              вартість і прискорює продаж у майбутньому.
+              авто зберігає статус &quot;нефарбоване&quot;, що позитивно впливає
+              на його вартість і прискорює продаж у майбутньому.
             </p>
           </li>
         </ul>
