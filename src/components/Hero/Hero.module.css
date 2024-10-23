@@ -1,9 +1,9 @@
 .hero {
   width: 100%;
-  background-color: #000;
-  background-image: var(--hero-gradient), url('../../img/hero/myths.png');
+  background-color: var(--foreground);
+  background-image: var(--hero-gradient), url('../../img/hero/hero.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
 }
 
@@ -12,20 +12,26 @@
   width: 1440px;
   padding: 200px;
   padding-top: 500px;
-  padding-bottom: 120px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
 }
 
 .hero_text {
   font-family: var(--font-pro);
   font-weight: 700;
   font-size: 45px;
-  margin-bottom: 30px;
+  & span {
+    color: var(--second-color);
+  }
 }
 
 .hero_button {
-  margin-left: 30%;
   padding: 10px;
-  background-color: rgba(100, 100, 100, 0.742);
+  background-color: #00000073;
   border-radius: 5px;
   font-size: 30px;
   width: 300px;
@@ -36,6 +42,6 @@
 
 .hero_button:hover,
 .hero_button:focus {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px var(--second-color-alfa);
   color: var(--second-color);
 }
