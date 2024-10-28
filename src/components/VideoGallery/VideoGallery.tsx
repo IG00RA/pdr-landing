@@ -7,14 +7,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import video1 from '../../videos/1.mp4';
-import video2 from '../../videos/2.mp4';
-import video3 from '../../videos/3.mp4';
-import video4 from '../../videos/4.mp4';
-import video5 from '../../videos/5.MOV';
-import video6 from '../../videos/6.MOV';
-import video7 from '../../videos/7.MOV';
-import video8 from '../../videos/8.MOV';
+import video1 from '/src/videos/1.mp4';
+import video2 from '/src/videos/2.mp4';
+import video3 from '/src/videos/3.mp4';
+import video4 from '/src/videos/4.mp4';
+import video5 from '/src/videos/5.MOV';
+import video6 from '/src/videos/6.MOV';
+import video7 from '/src/videos/7.MOV';
+import video8 from '/src/videos/8.MOV';
 import Icon from '@/helpers/Icon';
 
 const videoPairs = [

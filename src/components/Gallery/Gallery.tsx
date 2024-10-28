@@ -21,6 +21,7 @@ import eleventhImg from '../../img/gallery/12.jpg';
 import twelfthImg from '../../img/gallery/13.jpg';
 import thirteenthImg from '../../img/gallery/14.jpg';
 import Icon from '@/helpers/Icon';
+import Image from 'next/image';
 
 const images: string[] = [
   firstImg,
@@ -91,11 +92,13 @@ export default function Gallery() {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} className={styles.gallery_item}>
-              <img
+              <Image
                 src={image}
                 alt={`Слайд ${index + 1}`}
                 className={styles.slider_image}
                 onClick={() => openModal(image)}
+                width={500}
+                height={500}
               />
             </SwiperSlide>
           ))}
@@ -111,10 +114,12 @@ export default function Gallery() {
         {isOpen && (
           <div className={styles.modal} onClick={closeModal}>
             <div className={styles.modal_content}>
-              <img
+              <Image
                 src={currentImage}
                 alt="Full size"
                 className={styles.full_image}
+                width={500}
+                height={500}
               />
             </div>
           </div>
