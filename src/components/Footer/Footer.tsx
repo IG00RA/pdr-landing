@@ -65,7 +65,7 @@ export default function Footer() {
           <li>
             <a
               className={styles.link}
-              href="https://www.instagram.com/dent_center_chg/"
+              href="https://t.me/Oleg_tovstyak"
               target="_blank"
               rel="noopener noreferrer"
             >

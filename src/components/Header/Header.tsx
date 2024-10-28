@@ -21,15 +21,20 @@ export default function Header() {
         <div className={styles.nav_wrap}>
           <ul className={styles.contacts}>
             <li>
-              <a className={styles.link} href="mailto:info@devstudio.com">
+              <a
+                className={styles.link}
+                href="https://www.instagram.com/dent_center_chg/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Icon name="icon-instagram" width={25} height={25} />
                 @dent_center
               </a>
             </li>
             <li>
-              <a className={styles.link} href="tel:+380961111111">
+              <a className={styles.link} href="tel:+380731190408">
                 <Icon name="icon-mobile" width={25} height={25} />
-                +38 096 111 11 11
+                +380 73 119 0408
               </a>
             </li>
           </ul>

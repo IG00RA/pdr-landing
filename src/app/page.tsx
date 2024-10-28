@@ -6,6 +6,7 @@ import Gallery from '@/components/Gallery/Gallery';
 import Header from '@/components/Header/Header';
 import Hero from '@/components/Hero/Hero';
 import Map from '@/components/Map/Map';
+import VideoGallery from '@/components/VideoGallery/VideoGallery';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Features />
         <About />
         <Gallery />
+        <VideoGallery />
         <Advantages />
         <Map />
       </main>

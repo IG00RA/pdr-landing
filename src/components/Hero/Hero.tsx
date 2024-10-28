@@ -5,7 +5,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.container}>
         <h1 className={styles.hero_text}>
-          Видалення вм’ятин без фарбування на авто <span>PDR TECNOLOGY</span>
+          Видалення вм’ятин без фарбування на авто <span>PDR TECHNOLOGY</span>
         </h1>
         <button className={styles.hero_button} type="button">
           Наші роботи

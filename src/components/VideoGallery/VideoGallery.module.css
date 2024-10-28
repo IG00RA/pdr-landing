@@ -1,7 +1,7 @@
 .gallery {
   width: 100%;
   background-color: var(--foreground);
-  background-image: linear-gradient(35deg, #1c1c1c 29%, #000 30%);
+  background-image: linear-gradient(139deg, #1c1c1c 29%, #000 30%);
 }
 
 .container {
@@ -12,31 +12,9 @@
   align-items: center;
   flex-direction: column;
   padding: 200px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 5px;
+  padding-bottom: 120px;
   position: relative;
-}
-
-.gallery_text {
-  font-family: var(--font-jura);
-  font-weight: 400;
-  font-size: 25px;
-  margin-bottom: 70px;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.gallery_text::after {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 2px;
-  background-color: var(--second-color);
-  margin: 0 auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -15px;
 }
 
 .gallery_slider {
@@ -67,6 +45,10 @@
   border-radius: 10px;
   padding: 5px;
   transition: transform 0.3s ease, border-color 0.3s ease, fill 0.3s ease;
+  & div {
+    display: flex;
+    gap: 10px;
+  }
 }
 
 .gallery_item:hover {
@@ -119,28 +101,42 @@
   opacity: 1;
 }
 
-.modal {
-  position: fixed;
+.play_pause_button {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--main-text-color);
+  padding: 10px 10px;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
+  & svg {
+    transition: fill 0.3s ease;
+  }
+  &:hover svg {
+    fill: var(--second-color);
+  }
+}
+
+.video_wrapper {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slider_video {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  cursor: pointer;
+  object-fit: cover;
 }
 
-.modal_content {
-  position: relative;
-}
-
-.full_image {
-  max-width: 1100px;
-  max-height: 800px;
-  object-fit: contain;
-  border-radius: 30px;
+.loader {
+  position: absolute; /* Виставляє лоадер поверх відео */
+  top: 50%; /* Центрує по вертикалі */
+  left: 50%; /* Центрує по горизонталі */
+  transform: translate(-50%, -50%); /* Зсув для точного центровання */
+  font-size: 20px; /* Розмір шрифту лоадера */
+  color: white; /* Колір тексту */
 }
