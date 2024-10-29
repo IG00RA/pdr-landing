@@ -7,33 +7,50 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import video1 from '/src/videos/1.mp4';
-import video2 from '/src/videos/2.mp4';
-import video3 from '/src/videos/3.mp4';
-import video4 from '/src/videos/4.mp4';
-import video5 from '/src/videos/5.MOV';
-import video6 from '/src/videos/6.MOV';
-import video7 from '/src/videos/7.MOV';
-import video8 from '/src/videos/8.MOV';
 import Icon from '@/helpers/Icon';
 
 const videoPairs = [
-  [video1, video2],
-  [video3, video4],
-  [video5, video6],
-  [video7, video8],
+  [
+    'https://rozborka.pp.ua/image/oleg/1.mp4',
+    'https://rozborka.pp.ua/image/oleg/2.mp4',
+  ],
+  [
+    'https://rozborka.pp.ua/image/oleg/3.mp4',
+    'https://rozborka.pp.ua/image/oleg/4.mp4',
+  ],
+  [
+    'https://rozborka.pp.ua/image/oleg/5.mp4',
+    'https://rozborka.pp.ua/image/oleg/6.mp4',
+  ],
+  [
+    'https://rozborka.pp.ua/image/oleg/7.mp4',
+    'https://rozborka.pp.ua/image/oleg/8.mp4',
+  ],
 ];
 
 export default function VideoGallery() {
   const [isPlaying, setIsPlaying] = useState<boolean[]>(
     Array(videoPairs.length).fill(false)
   );
+  const [isLoading, setIsLoading] = useState<boolean[]>(
+    Array(videoPairs.length).fill(true)
+  );
 
   const videoRefs = useRef<(HTMLVideoElement | null)[][]>(
     videoPairs.map(() => [null, null]) as (HTMLVideoElement | null)[][]
   );
 
+  const handleCanPlay = (index: number) => {
+    setIsLoading(prev => {
+      const updated = [...prev];
+      updated[index] = false;
+      return updated;
+    });
+  };
+
   const togglePlayPause = (index: number) => {
+    if (isLoading[index]) return;
+
     setIsPlaying(prev => {
       const updated = [...prev];
       updated[index] = !updated[index];
@@ -87,17 +104,27 @@ export default function VideoGallery() {
                       className={styles.slider_video}
                       muted
                       loop
+                      onCanPlay={() => handleCanPlay(index)}
                     />
                   </div>
                 ))}
               </div>
-              <button className={styles.play_pause_button}>
-                {isPlaying[index] ? (
-                  <Icon name="icon-pause" width={35} height={35} />
-                ) : (
-                  <Icon name="icon-play" width={35} height={35} />
-                )}
-              </button>
+              {isLoading[index] ? (
+                <div className={styles.loader}>
+                  <Icon name="icon-load" width={35} height={35} />
+                </div>
+              ) : (
+                <button
+                  className={styles.play_pause_button}
+                  disabled={isLoading[index]}
+                >
+                  {isPlaying[index] ? (
+                    <Icon name="icon-pause" width={35} height={35} />
+                  ) : (
+                    <Icon name="icon-play" width={35} height={35} />
+                  )}
+                </button>
+              )}
             </SwiperSlide>
           ))}
         </Swiper>

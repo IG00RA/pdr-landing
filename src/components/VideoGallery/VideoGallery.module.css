@@ -133,10 +133,19 @@
 }
 
 .loader {
-  position: absolute; /* Виставляє лоадер поверх відео */
-  top: 50%; /* Центрує по вертикалі */
-  left: 50%; /* Центрує по горизонталі */
-  transform: translate(-50%, -50%); /* Зсув для точного центровання */
-  font-size: 20px; /* Розмір шрифту лоадера */
-  color: white; /* Колір тексту */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--main-text-color);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
