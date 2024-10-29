@@ -84,6 +84,14 @@ export default function Footer() {
         >
           By Igoora
         </a>
+        <a
+          className={styles.github_link}
+          href="/policy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Політика конфіденційності
+        </a>
       </div>
     </footer>
   );

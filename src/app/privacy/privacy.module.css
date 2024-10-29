@@ -1,0 +1,29 @@
+.container {
+  max-width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--foreground);
+  color: var(--main-text-color);
+  font-family: var(--font-jura);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--second-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: var(--background);
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 1rem;
+  color: var(--main-text-color);
+  line-height: 1.6;
+  margin-top: 10px;
+}

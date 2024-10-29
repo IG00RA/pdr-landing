@@ -15,7 +15,7 @@ const Icon: React.FC<IconProps> = ({
 }) => {
   return (
     <svg className={styles.icon} width={width} height={height} fill={color}>
-      <use href={`/icons.svg#${name}`} />
+      <use href={`/assets/icons.svg#${name}`} />
     </svg>
   );
 };

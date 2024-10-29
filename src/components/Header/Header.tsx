@@ -9,7 +9,13 @@ export default function Header() {
       <div className={styles.container}>
         <div className={styles.logo_wrap}>
           <a href="/">
-            <Image className={styles.logo} src={logo} alt="logo" />
+            <Image
+              className={styles.logo}
+              src={logo}
+              width={200}
+              height={150}
+              alt="logo"
+            />
           </a>
           <div className={styles.text_wrap}>
             <span className={`${styles.logo_text} ${styles.logo_text_large}`}>
