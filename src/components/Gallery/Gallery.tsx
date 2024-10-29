@@ -42,6 +42,9 @@ const images: string[] = [
 export default function Gallery() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [currentImage, setCurrentImage] = useState<string>('');
+  const [loadingImages, setLoadingImages] = useState<boolean[]>(
+    Array(images.length).fill(true)
+  );
 
   const openModal = (image: string): void => {
     setCurrentImage(image);
@@ -53,6 +56,14 @@ export default function Gallery() {
     setIsOpen(false);
     setCurrentImage('');
     document.body.style.overflow = 'auto';
+  };
+
+  const handleImageLoad = (index: number) => {
+    setLoadingImages(prev => {
+      const updated = [...prev];
+      updated[index] = false;
+      return updated;
+    });
   };
 
   useEffect(() => {
@@ -92,14 +103,22 @@ export default function Gallery() {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} className={styles.gallery_item}>
-              <Image
-                src={image}
-                alt={`Слайд ${index + 1}`}
-                className={styles.slider_image}
-                onClick={() => openModal(image)}
-                width={500}
-                height={500}
-              />
+              <div className={styles.image_wrapper}>
+                {loadingImages[index] && (
+                  <div className={styles.loader}>
+                    <Icon name="icon-load" width={35} height={35} />
+                  </div>
+                )}
+                <Image
+                  src={image}
+                  alt={`Слайд ${index + 1}`}
+                  className={styles.slider_image}
+                  onLoad={() => handleImageLoad(index)}
+                  onClick={() => openModal(image)}
+                  width={400}
+                  height={400}
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -118,8 +137,8 @@ export default function Gallery() {
                 src={currentImage}
                 alt="Full size"
                 className={styles.full_image}
-                width={500}
-                height={500}
+                width={1200}
+                height={1200}
               />
             </div>
           </div>
