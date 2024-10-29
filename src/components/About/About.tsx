@@ -2,7 +2,7 @@ import styles from './About.module.css';
 
 export default function About() {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <div className={styles.container}>
         <h3 className={styles.about_par_header}>
           Видалення вм&apos;ятин на авто без фарбування PDR у Червонограді

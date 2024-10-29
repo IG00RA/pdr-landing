@@ -86,7 +86,7 @@ export default function Footer() {
         </a>
         <a
           className={styles.github_link}
-          href="/policy"
+          href="/privacy"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -37,6 +37,7 @@
   width: 300px;
   transition: all 0.3s ease;
   text-transform: uppercase;
+  text-align: center;
   font-family: var(--font-jura);
 }
 

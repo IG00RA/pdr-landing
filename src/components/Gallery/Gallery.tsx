@@ -83,7 +83,7 @@ export default function Gallery() {
   }, [isOpen]);
 
   return (
-    <section className={styles.gallery}>
+    <section id="gallery" className={styles.gallery}>
       <div className={styles.container}>
         <h2 className={styles.gallery_text}>Наші роботи:</h2>
         <Swiper

@@ -3,7 +3,7 @@ import styles from './Map.module.css';
 // 50.386985, 24.229896;
 export default function Map() {
   return (
-    <section className={styles.map}>
+    <section id="contacts" className={styles.map}>
       <div className={styles.container}>
         <div className={styles.map_container}>
           <iframe

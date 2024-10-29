@@ -47,17 +47,17 @@ export default function Header() {
           <nav>
             <ul className={styles.nav}>
               <li>
-                <a className={styles.link} href="#">
+                <a className={styles.link} href="#about">
                   Послуги
                 </a>
               </li>
               <li>
-                <a className={styles.link} href="#">
+                <a className={styles.link} href="#gallery">
                   Портфоліо
                 </a>
               </li>
               <li>
-                <a className={styles.link} href="#">
+                <a className={styles.link} href="#contacts">
                   Контакти
                 </a>
               </li>
