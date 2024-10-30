@@ -1,9 +1,23 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import styles from './Header.module.css';
 import logo from '../../img/header/logo.png';
 import Icon from '@/helpers/Icon';
+import MobMenu from '../MobMenu/MobMenu';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+  const openMenu = () => {
+    setIsMenuOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -64,6 +78,10 @@ export default function Header() {
             </ul>
           </nav>
         </div>
+        <div className={styles.burger_wrap} onClick={openMenu}>
+          <Icon name="icon-menu" width={30} height={40} />
+        </div>
+        <MobMenu isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
       </div>
     </header>
   );

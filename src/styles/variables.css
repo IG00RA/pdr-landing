@@ -13,4 +13,17 @@
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)
   );
+
+  --modal-overlay: rgba(0, 0, 0, 0.8);
+
+  --fs-small: 14px;
+  --fs-medium: 18px;
+  --fs-large: 25px;
+  --fs-xlarge: 30px;
+
+  --mobile: 375px;
+  --mobile-l: 475px;
+  --tablet: 768px;
+  --laptop: 1024px;
+  --desktop: 1440px;
 }
