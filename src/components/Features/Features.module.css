@@ -6,23 +6,39 @@
 
 .container {
   margin: 0 auto;
-  width: 1440px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 200px;
-  padding-top: 50px;
-  padding-bottom: 120px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media (min-width: 425px) {
+    padding: 40px;
+  }
+  @media (min-width: 1440px) {
+    width: 1440px;
+    padding: 50px 200px 120px 200px;
+  }
 }
 
 .features_text {
   font-family: var(--font-jura);
   font-weight: 400;
-  font-size: 25px;
-  margin-bottom: 70px;
+  font-size: 17px;
+  margin-bottom: 30px;
   text-transform: uppercase;
   position: relative;
+
+  @media (min-width: 425px) {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 25px;
+    margin-bottom: 70px;
+  }
 }
 
 .features_text::after {
@@ -35,32 +51,58 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -15px;
+  bottom: -10px;
+  @media (min-width: 1024px) {
+    bottom: -15px;
+  }
 }
 
 .features_list {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  gap: 20px;
   list-style: none;
+  align-items: center;
   padding: 0;
   margin: 0;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 .features_item {
   background-color: #1a1a1a75;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 20px;
-  width: 30%;
+  padding: 10px;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
   transition: transform 0.3s ease, border-color 0.3s ease, fill 0.3s ease;
+  @media (min-width: 425px) {
+    width: 350px;
+  }
+  @media (min-width: 768px) {
+    width: 30%;
+    max-width: 310px;
+    height: 270px;
+  }
+  @media (min-width: 1024px) {
+    padding: 20px;
+    gap: 25px;
+    height: 310px;
+  }
+  @media (min-width: 1440px) {
+    max-width: auto;
+  }
   & svg {
     margin: 0 auto;
   }
   & h3 {
     font-size: 25px;
+    text-align: center;
   }
   & p {
     color: #dddddd;
