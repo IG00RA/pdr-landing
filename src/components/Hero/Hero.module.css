@@ -1,29 +1,59 @@
 .hero {
   width: 100%;
   background-color: var(--foreground);
-  background-image: var(--hero-gradient), url('../../img/hero/hero.png');
+  background-image: var(--hero-gradient), url('../../img/hero/heroMob.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  @media (min-width: 768px) {
+    background-image: var(--hero-gradient), url('../../img/hero/hero.png');
+  }
+  @media (min-width: 1440px) {
+    height: 85vh;
+  }
 }
 
 .container {
   margin: 0 auto;
-  width: 1440px;
-  padding: 200px;
-  padding-top: 500px;
-  padding-bottom: 60px;
+  width: 100%;
+  padding: 20px 20px 100px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 60px;
   flex-direction: column;
+  @media (min-width: 768px) {
+    padding: 50px;
+    padding-bottom: 120px;
+  }
+  @media (min-width: 1024px) {
+    padding: 150px 150px 80px 150px;
+  }
+  @media (min-width: 1440px) {
+    width: 1440px;
+    gap: 30px;
+    padding: 200px 200px 60px 20px;
+  }
 }
 
 .hero_text {
   font-family: var(--font-pro);
   font-weight: 700;
-  font-size: 45px;
+  font-size: var(--fs-xlarge);
+  max-width: 600px;
+
+  @media (min-width: 768px) {
+    font-size: var(--fs-xxlarge);
+    max-width: 800px;
+  }
+  @media (min-width: 1024px) {
+    font-size: var(--fs-xxxlarge);
+    max-width: 950px;
+  }
   & span {
     color: var(--second-color);
   }
@@ -33,12 +63,21 @@
   padding: 10px;
   background-color: #00000073;
   border-radius: 5px;
-  font-size: 30px;
-  width: 300px;
+  font-size: var(--fs-xlarge);
+  width: 200px;
   transition: all 0.3s ease;
   text-transform: uppercase;
   text-align: center;
   font-family: var(--font-jura);
+  @media (min-width: 768px) {
+    width: 250px;
+  }
+  @media (min-width: 1024px) {
+    width: 280px;
+  }
+  @media (min-width: 1440px) {
+    width: 300px;
+  }
 }
 
 .hero_button:hover,
