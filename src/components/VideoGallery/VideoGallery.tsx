@@ -86,6 +86,16 @@ export default function VideoGallery() {
           className={styles.gallery_slider}
           modules={[Navigation, Pagination]}
           loop={true}
+          breakpoints={{
+            768: {
+              spaceBetween: 20,
+              slidesPerView: 1.2,
+            },
+            0: {
+              spaceBetween: 10,
+              slidesPerView: 0.8,
+            },
+          }}
         >
           {videoPairs.map((pair, index) => (
             <SwiperSlide

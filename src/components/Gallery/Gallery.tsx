@@ -100,6 +100,16 @@ export default function Gallery() {
           className={styles.gallery_slider}
           modules={[Navigation, Pagination]}
           loop={true}
+          breakpoints={{
+            768: {
+              spaceBetween: 20,
+              slidesPerView: 2,
+            },
+            0: {
+              spaceBetween: 10,
+              slidesPerView: 1,
+            },
+          }}
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} className={styles.gallery_item}>
