@@ -5,11 +5,19 @@
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 0 20px;
+  }
 }
 
 .logo_wrap {
@@ -19,8 +27,14 @@
 }
 
 .logo {
-  width: 250px;
+  width: 160px;
   height: auto;
+  @media (min-width: 768px) {
+    width: 200px;
+  }
+  @media (min-width: 1024px) {
+    width: 250px;
+  }
 }
 
 .nav_wrap {
@@ -32,29 +46,45 @@
 .contacts {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
   justify-content: center;
   align-items: center;
+  @media (min-width: 1024px) {
+    gap: 22px;
+  }
+  @media (min-width: 1440px) {
+    gap: 30px;
+  }
 }
 
 .contacts li {
-  margin-right: 20px;
+  @media (min-width: 1024px) {
+    margin-right: 20px;
+  }
 }
 
 .link {
   color: var(--main-text-color);
-  font-size: 20px;
+  font-size: var(--fs-medium);
   font-family: var(--font-pro);
   display: flex;
-}
-
-.link svg {
-  transition: fill 0.3s ease;
-  margin-right: 5px;
-}
-
-.link:hover svg {
-  fill: var(--second-color);
+  gap: 10px;
+  text-align: center;
+  max-width: 345px;
+  & svg {
+    transition: fill 0.3s ease;
+    margin-right: 5px;
+  }
+  &:hover svg {
+    fill: var(--second-color);
+  }
+  @media (min-width: 1024px) {
+    max-width: 405px;
+  }
+  @media (min-width: 1440px) {
+    font-size: var(--fs-large);
+    max-width: 795px;
+  }
 }
 
 .copyright {
@@ -62,9 +92,13 @@
   padding: 5px 0;
   background-color: #0f0f0f;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 }
 
 .github_link {

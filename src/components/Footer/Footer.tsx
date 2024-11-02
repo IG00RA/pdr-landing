@@ -78,19 +78,19 @@ export default function Footer() {
         <p>© 2024 Червоноград Dent Center. Всі права захищені.</p>
         <a
           className={styles.github_link}
-          href="https://github.com/IG00RA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          By Igoora
-        </a>
-        <a
-          className={styles.github_link}
           href="/privacy"
           target="_blank"
           rel="noopener noreferrer"
         >
           Політика конфіденційності
+        </a>
+        <a
+          className={styles.github_link}
+          href="https://github.com/IG00RA"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          By Igoora
         </a>
       </div>
     </footer>
