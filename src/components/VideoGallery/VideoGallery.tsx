@@ -138,6 +138,7 @@ export default function VideoGallery() {
             </SwiperSlide>
           ))}
         </Swiper>
+
         <div className={styles.prev}>
           <Icon name="icon-arrow_back" width={35} height={35} />
         </div>

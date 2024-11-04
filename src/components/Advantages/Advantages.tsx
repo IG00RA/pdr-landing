@@ -1,3 +1,5 @@
+import { advantagesData } from '@/data/data';
+import FadeInSection from '../Motion/FadeInSection';
 import styles from './Advantages.module.css';
 
 export default function Advantages() {
@@ -8,40 +10,13 @@ export default function Advantages() {
           Переваги видалення вм&apos;ятин без необхідності фарбування:
         </h3>
         <ul className={styles.advantages_list}>
-          <li className={styles.advantages_item}>
-            <p>
-              збереження оригінального лакофарбового покриття. Часто можна
-              побачити автомобілі з різницею в кольорах окремих частин, через
-              неправильний підбір фарби;
-            </p>
-          </li>
-          <li className={styles.advantages_item}>
-            <p>
-              оригінальне покриття автомобіля більш довговічне, оскільки
-              заводське фарбування відбувається із дотриманням усіх
-              технологічних вимог;
-            </p>
-          </li>
-          <li className={styles.advantages_item}>
-            <p>
-              процес фарбування займає значно більше часу, а через невелику
-              кількість кваліфікованих майстрів, очікування може становити до
-              кількох тижнів;
-            </p>
-          </li>
-          <li className={styles.advantages_item}>
-            <p>
-              рихтування без фарбування за допомогою PDR коштує менше, ніж повне
-              відновлення та фарбування деталі. У важкодоступних місцях вартість
-              може наближатися до ціни фарбування, але все одно буде вигіднішою;
-            </p>
-          </li>
-          <li className={styles.advantages_item}>
-            <p>
-              авто зберігає статус &quot;нефарбоване&quot;, що позитивно впливає
-              на його вартість і прискорює продаж у майбутньому.
-            </p>
-          </li>
+          {advantagesData.map((advantage, index) => (
+            <FadeInSection key={index}>
+              <li className={styles.advantages_item}>
+                <p>{advantage}</p>
+              </li>
+            </FadeInSection>
+          ))}
         </ul>
       </div>
     </section>

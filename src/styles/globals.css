@@ -82,3 +82,9 @@ img {
 .swiper-pagination-bullet:hover {
   opacity: 1 !important;
 }
+
+.animated-section {
+  overflow: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
+}

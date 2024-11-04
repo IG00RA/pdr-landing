@@ -13,6 +13,7 @@ export default function Map() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+
         <div className={styles.map_overlay}></div>
         <div className={styles.info_container}>
           <h3 className={styles.info_header}>Наші контакти</h3>

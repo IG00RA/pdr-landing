@@ -86,6 +86,7 @@ export default function Gallery() {
     <section id="gallery" className={styles.gallery}>
       <div className={styles.container}>
         <h2 className={styles.gallery_text}>Наші роботи:</h2>
+
         <Swiper
           navigation={{
             prevEl: `.${styles.prev}`,
@@ -132,6 +133,7 @@ export default function Gallery() {
             </SwiperSlide>
           ))}
         </Swiper>
+
         <div className={styles.prev}>
           <Icon name="icon-arrow_back" width={35} height={35} />
         </div>

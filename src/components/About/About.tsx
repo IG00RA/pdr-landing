@@ -1,3 +1,5 @@
+import { servicesData } from '@/data/data';
+import FadeInSection from '../Motion/FadeInSection';
 import styles from './About.module.css';
 
 export default function About() {
@@ -37,24 +39,13 @@ export default function About() {
         <div className={styles.about_wrap}>
           <h2 className={styles.about_text}>Ми пропонуємо:</h2>
           <ul className={styles.about_list}>
-            <li className={styles.about_item}>
-              <p>
-                видалення вм&apos;ятин на автомобільних деталях без потреби в
-                повторному фарбуванні;
-              </p>
-            </li>
-            <li className={styles.about_item}>
-              <p>
-                ремонт дрібних пошкоджень елементів кузова, не вимагаючи
-                додаткового фарбування;
-              </p>
-            </li>
-            <li className={styles.about_item}>
-              <p>
-                усунення деформацій елемента зі збереженням оригінального
-                лакофарбового покриття;
-              </p>
-            </li>
+            {servicesData.map((service, index) => (
+              <FadeInSection key={index}>
+                <li className={styles.about_item}>
+                  <p>{service}</p>
+                </li>
+              </FadeInSection>
+            ))}
           </ul>
         </div>
       </div>
