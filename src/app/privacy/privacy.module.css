@@ -9,20 +9,20 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: var(--fs-xlarge);
   color: var(--second-color);
   margin-bottom: 20px;
   text-align: center;
 }
 
 .subtitle {
-  font-size: 1.8rem;
-  color: var(--background);
+  font-size: var(--fs-large);
+  color: var(--main-text-color);
   margin-top: 20px;
 }
 
 .text {
-  font-size: 1rem;
+  font-size: var(--fs-medium);
   color: var(--main-text-color);
   line-height: 1.6;
   margin-top: 10px;

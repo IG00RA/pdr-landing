@@ -9,10 +9,12 @@
 
 .mobile_link {
   margin-bottom: 10px;
+
   & a {
     color: var(--foreground);
     font-size: var(--fs-xlarge);
     text-transform: uppercase;
+
     & svg {
       margin-right: 10px;
     }
@@ -45,6 +47,7 @@
   left: 180px;
   z-index: 1;
   cursor: pointer;
+
   & svg {
     fill: var(--foreground);
   }

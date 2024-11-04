@@ -11,9 +11,11 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
+
   @media (min-width: 768px) {
     flex-direction: row;
   }
+
   @media (min-width: 1440px) {
     max-width: 1440px;
     padding: 0 20px;
@@ -29,10 +31,12 @@
 .logo {
   width: 160px;
   height: auto;
+
   @media (min-width: 768px) {
     width: 200px;
     height: auto;
   }
+
   @media (min-width: 1024px) {
     width: 250px;
     height: auto;
@@ -51,9 +55,11 @@
   gap: 15px;
   justify-content: center;
   align-items: center;
+
   @media (min-width: 1024px) {
     gap: 22px;
   }
+
   @media (min-width: 1440px) {
     gap: 30px;
   }
@@ -73,16 +79,20 @@
   gap: 10px;
   text-align: center;
   max-width: 345px;
+
   & svg {
     transition: fill 0.3s ease;
     margin-right: 5px;
   }
+
   &:hover svg {
     fill: var(--second-color);
   }
+
   @media (min-width: 1024px) {
     max-width: 405px;
   }
+
   @media (min-width: 1440px) {
     font-size: var(--fs-large);
     max-width: 795px;
@@ -98,6 +108,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+
   @media (min-width: 1024px) {
     flex-direction: row;
   }
