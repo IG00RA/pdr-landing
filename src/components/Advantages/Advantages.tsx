@@ -11,11 +11,11 @@ export default function Advantages() {
         </h3>
         <ul className={styles.advantages_list}>
           {advantagesData.map((advantage, index) => (
-            <FadeInSection key={index}>
-              <li className={styles.advantages_item}>
+            <li key={index} className={styles.advantages_item}>
+              <FadeInSection>
                 <p>{advantage}</p>
-              </li>
-            </FadeInSection>
+              </FadeInSection>
+            </li>
           ))}
         </ul>
       </div>

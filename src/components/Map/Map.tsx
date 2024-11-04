@@ -11,6 +11,7 @@ export default function Map() {
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="Google Maps location for Dent Center in Chervonograd"
           ></iframe>
         </div>
 

@@ -40,11 +40,11 @@ export default function About() {
           <h2 className={styles.about_text}>Ми пропонуємо:</h2>
           <ul className={styles.about_list}>
             {servicesData.map((service, index) => (
-              <FadeInSection key={index}>
-                <li className={styles.about_item}>
-                  <p>{service}</p>
-                </li>
-              </FadeInSection>
+              <li key={index} className={styles.about_item}>
+                <FadeInSection>
+                  <p>{service}</p>{' '}
+                </FadeInSection>
+              </li>
             ))}
           </ul>
         </div>

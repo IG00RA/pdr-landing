@@ -8,14 +8,14 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.logo_wrap}>
-          <a href="/">
+          <a href="/" aria-label="Home">
             <Image
               className={styles.logo}
               src={logo}
               width={0}
               height={0}
               sizes="100vw"
-              alt="logo"
+              alt="Dent Center logo"
             />
           </a>
         </div>
@@ -26,13 +26,18 @@ export default function Footer() {
               href="https://maps.app.goo.gl/yLwk89t9KdKCYJeE9"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Location on Google Maps"
             >
               <Icon name="icon-location" width={25} height={25} />
               вул. Богдана Хмельницького, 29а, м. Червоноград
             </a>
           </li>
           <li>
-            <a className={styles.link} href="tel:+380731190408">
+            <a
+              className={styles.link}
+              href="tel:+380731190408"
+              aria-label="Phone number +380 73 119 0408"
+            >
               <Icon name="icon-phone" width={25} height={25} />
               +380 73 119 0408
             </a>
@@ -45,6 +50,7 @@ export default function Footer() {
               href="https://www.instagram.com/dent_center_chg/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram profile"
             >
               <Icon name="icon-instagram" width={35} height={35} />
             </a>
@@ -52,9 +58,10 @@ export default function Footer() {
           <li>
             <a
               className={styles.link}
-              href="https://www.instagram.com/dent_center_chg/"
+              href="https://www.facebook.com/dent_center_chg"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook profile"
             >
               <Icon name="icon-facebook" width={35} height={35} />
             </a>
@@ -65,6 +72,7 @@ export default function Footer() {
               href="viber://add?number=%2B380731190408"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Viber chat"
             >
               <Icon name="icon-viber" width={35} height={35} />
             </a>
@@ -75,6 +83,7 @@ export default function Footer() {
               href="https://t.me/Oleg_tovstyak"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Telegram profile"
             >
               <Icon name="icon-telegram" width={35} height={35} />
             </a>
@@ -88,6 +97,7 @@ export default function Footer() {
           href="/privacy"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Privacy Policy"
         >
           Політика конфіденційності
         </a>
@@ -96,6 +106,7 @@ export default function Footer() {
           href="https://github.com/IG00RA"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub profile of Igoora"
         >
           By Igoora
         </a>

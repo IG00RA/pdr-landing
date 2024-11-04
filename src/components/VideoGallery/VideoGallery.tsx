@@ -125,8 +125,10 @@ export default function VideoGallery() {
                 </div>
               ) : (
                 <button
+                  type="button"
                   className={styles.play_pause_button}
                   disabled={isLoading[index]}
+                  aria-label={isPlaying[index] ? 'Pause video' : 'Play video'}
                 >
                   {isPlaying[index] ? (
                     <Icon name="icon-pause" width={35} height={35} />
