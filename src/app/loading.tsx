@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './loader.module.css';
+import styles from './loading.module.css';
 import logo from '../img/header/logo.png';
 
 export default function Loading() {
@@ -8,8 +8,9 @@ export default function Loading() {
       <Image
         className={styles.logo}
         src={logo}
-        width={200}
-        height={150}
+        width={0}
+        height={0}
+        sizes="100vw"
         alt="logo"
       />
     </div>

@@ -28,8 +28,9 @@ export default function Header() {
             <Image
               className={styles.logo}
               src={logo}
-              width={200}
-              height={150}
+              width={0}
+              height={0}
+              sizes="100vw"
               alt="logo"
             />
           </a>

@@ -33,7 +33,7 @@
       font-size: var(--fs-medium);
     }
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1440px) {
     top: 50%;
     transform: translateY(-50%);
   }

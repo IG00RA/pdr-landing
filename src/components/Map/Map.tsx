@@ -7,7 +7,7 @@ export default function Map() {
       <div className={styles.container}>
         <div className={styles.map_container}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2544.7557043109596!2d24.225025094305295!3d50.38698831865923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTDCsDIzJzEzLjIiTiAyNMKwMTMnNDcuNiJF!5e0!3m2!1sen!2sua!4v1729692691774!5m2!1sen!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d5088.3174087455345!2d24.234359992282112!3d50.386837489887895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTDCsDIzJzEzLjIiTiAyNMKwMTMnNDcuNiJF!5e0!3m2!1sen!2sua!4v1730716324880!5m2!1sen!2sua"
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

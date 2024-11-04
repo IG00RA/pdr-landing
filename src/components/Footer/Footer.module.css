@@ -31,9 +31,11 @@
   height: auto;
   @media (min-width: 768px) {
     width: 200px;
+    height: auto;
   }
   @media (min-width: 1024px) {
     width: 250px;
+    height: auto;
   }
 }
 

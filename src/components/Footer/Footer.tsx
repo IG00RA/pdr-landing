@@ -9,7 +9,14 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.logo_wrap}>
           <a href="/">
-            <Image className={styles.logo} src={logo} alt="logo" />
+            <Image
+              className={styles.logo}
+              src={logo}
+              width={0}
+              height={0}
+              sizes="100vw"
+              alt="logo"
+            />
           </a>
         </div>
         <ul className={styles.contacts}>
