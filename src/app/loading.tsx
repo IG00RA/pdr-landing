@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './loading.module.css';
-import logo from '../img/header/logo.png';
+import logo from '../img/header/logo.webp';
 
 export default function Loading() {
   return (

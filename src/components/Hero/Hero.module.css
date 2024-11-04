@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   background-color: var(--foreground);
-  background-image: var(--hero-gradient), url('../../img/hero/heroMob.jpg');
+  background-image: var(--hero-gradient), url('../../img/hero/heroMob.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: flex-end;
   @media (min-width: 768px) {
-    background-image: var(--hero-gradient), url('../../img/hero/hero.png');
+    background-image: var(--hero-gradient), url('../../img/hero/hero.webp');
   }
   @media (min-width: 1440px) {
     height: 85vh;

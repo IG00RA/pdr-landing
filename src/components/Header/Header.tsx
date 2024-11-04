@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import styles from './Header.module.css';
-import logo from '../../img/header/logo.png';
+import logo from '../../img/header/logo.webp';
 import Icon from '@/helpers/Icon';
 import MobMenu from '../MobMenu/MobMenu';
 

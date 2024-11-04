@@ -1,6 +1,6 @@
 import styles from './Footer.module.css';
 import Image from 'next/image';
-import logo from '../../img/header/logo.png';
+import logo from '../../img/header/logo.webp';
 import Icon from '@/helpers/Icon';
 
 export default function Footer() {
