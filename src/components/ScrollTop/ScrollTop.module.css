@@ -1,0 +1,70 @@
+.buttonContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.borderCircle {
+  border: 1px solid rgba(122, 122, 122, 0.42);
+  border-radius: 50%;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  background-color: var(--modal-overlay);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  &:hover svg {
+    fill: var(--second-color);
+  }
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.borderCircle svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.scrollToTopIcon {
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+  }
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.phoneIcon {
+  & svg {
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}

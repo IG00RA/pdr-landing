@@ -6,6 +6,7 @@ import Gallery from '@/components/Gallery/Gallery';
 import Header from '@/components/Header/Header';
 import Hero from '@/components/Hero/Hero';
 import Map from '@/components/Map/Map';
+import ScrollTop from '@/components/ScrollTop/ScrollTop';
 import VideoGallery from '@/components/VideoGallery/VideoGallery';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <Header />
       <main>
+        <ScrollTop />
         <Hero />
         <Features />
         <About />
