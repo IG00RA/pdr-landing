@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styles from './VideoGallery.module.css';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,45 +8,29 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Icon from '@/helpers/Icon';
+import { videoPairs as originalVideoPairs } from '@/data/mediaData';
 
-const videoPairs = [
-  [
-    'https://rozborka.pp.ua/image/oleg/1.mp4',
-    'https://rozborka.pp.ua/image/oleg/2.mp4',
-  ],
-  [
-    'https://rozborka.pp.ua/image/oleg/3.mp4',
-    'https://rozborka.pp.ua/image/oleg/4.mp4',
-  ],
-  [
-    'https://rozborka.pp.ua/image/oleg/5.mp4',
-    'https://rozborka.pp.ua/image/oleg/6.mp4',
-  ],
-  [
-    'https://rozborka.pp.ua/image/oleg/7.mp4',
-    'https://rozborka.pp.ua/image/oleg/8.mp4',
-  ],
-];
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
 
 export default function VideoGallery() {
+  const [videoPairs, setVideoPairs] = useState(originalVideoPairs);
   const [isPlaying, setIsPlaying] = useState<boolean[]>(
-    Array(videoPairs.length).fill(false)
+    Array(originalVideoPairs.length).fill(false)
   );
   const [isLoading, setIsLoading] = useState<boolean[]>(
-    Array(videoPairs.length).fill(true)
+    Array(originalVideoPairs.length).fill(false)
   );
 
   const videoRefs = useRef<(HTMLVideoElement | null)[][]>(
-    videoPairs.map(() => [null, null]) as (HTMLVideoElement | null)[][]
+    originalVideoPairs.map(() => [null, null]) as (HTMLVideoElement | null)[][]
   );
-
-  const handleCanPlay = (index: number) => {
-    setIsLoading(prev => {
-      const updated = [...prev];
-      updated[index] = false;
-      return updated;
-    });
-  };
 
   const togglePlayPause = (index: number) => {
     if (isLoading[index]) return;
@@ -58,6 +42,9 @@ export default function VideoGallery() {
       videoRefs.current[index].forEach(video => {
         if (video) {
           if (updated[index]) {
+            if (video.readyState === 0) {
+              video.load();
+            }
             video.play();
           } else {
             video.pause();
@@ -68,6 +55,27 @@ export default function VideoGallery() {
       return updated;
     });
   };
+
+  const handleCanPlay = (index: number) => {
+    setIsLoading(prev => {
+      const updated = [...prev];
+      updated[index] = false;
+      return updated;
+    });
+  };
+
+  const pauseAllVideos = () => {
+    setIsPlaying(Array(videoPairs.length).fill(false));
+    videoRefs.current.forEach(videoPair => {
+      videoPair.forEach(video => {
+        if (video) video.pause();
+      });
+    });
+  };
+
+  useEffect(() => {
+    setVideoPairs(shuffleArray(originalVideoPairs));
+  }, []);
 
   return (
     <div className={styles.gallery}>
@@ -86,6 +94,7 @@ export default function VideoGallery() {
           className={styles.gallery_slider}
           modules={[Navigation, Pagination]}
           loop={true}
+          onSlideChange={pauseAllVideos}
           breakpoints={{
             768: {
               spaceBetween: 20,
@@ -104,7 +113,7 @@ export default function VideoGallery() {
               onClick={() => togglePlayPause(index)}
             >
               <div className={styles.video_pair}>
-                {pair.map((video, i) => (
+                {pair.video.map((video, i) => (
                   <div key={i} className={styles.video_wrapper}>
                     <video
                       ref={el => {
@@ -114,6 +123,8 @@ export default function VideoGallery() {
                       className={styles.slider_video}
                       muted
                       loop
+                      preload="none"
+                      poster={pair.poster[i]}
                       onCanPlay={() => handleCanPlay(index)}
                     />
                   </div>

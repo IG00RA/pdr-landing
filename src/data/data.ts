@@ -1,17 +1,3 @@
-import firstImg from '../img/gallery/1.webp';
-import secondImg from '../img/gallery/2.webp';
-import thirdImg from '../img/gallery/3.webp';
-import fourthImg from '../img/gallery/4.webp';
-import fifthImg from '../img/gallery/5.webp';
-import sixthImg from '../img/gallery/6.webp';
-import seventhImg from '../img/gallery/7.webp';
-import eighthImg from '../img/gallery/8.webp';
-import nineImg from '../img/gallery/9.webp';
-import tenthImg from '../img/gallery/11.webp';
-import eleventhImg from '../img/gallery/12.webp';
-import twelfthImg from '../img/gallery/13.webp';
-import thirteenthImg from '../img/gallery/14.webp';
-
 interface Feature {
   title: string;
   icon: string;
@@ -55,19 +41,3 @@ export const advantagesData: string[] = [
   'рихтування без фарбування за допомогою PDR коштує менше, ніж повне відновлення та фарбування деталі. У важкодоступних місцях вартість може наближатися до ціни фарбування, але все одно буде вигіднішою;',
   'авто зберігає статус "нефарбоване", що позитивно впливає на його вартість і прискорює продаж у майбутньому.',
 ];
-
-export const galleryImages: string[] = [
-  firstImg,
-  secondImg,
-  thirdImg,
-  fourthImg,
-  fifthImg,
-  sixthImg,
-  seventhImg,
-  eighthImg,
-  nineImg,
-  tenthImg,
-  eleventhImg,
-  twelfthImg,
-  thirteenthImg,
-].map(image => image.src);

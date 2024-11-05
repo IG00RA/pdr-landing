@@ -9,13 +9,23 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Icon from '@/helpers/Icon';
 import Image from 'next/image';
-import { galleryImages } from '@/data/data';
+import { galleryImages as originalGalleryImages } from '@/data/mediaData';
+
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
 
 export default function Gallery() {
+  const [galleryImages, setGalleryImages] = useState(originalGalleryImages);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [currentImage, setCurrentImage] = useState<string>('');
   const [loadingImages, setLoadingImages] = useState<boolean[]>(
-    Array(galleryImages.length).fill(true)
+    Array(originalGalleryImages.length).fill(true)
   );
 
   const openModal = (image: string): void => {
@@ -53,6 +63,10 @@ export default function Gallery() {
       document.removeEventListener('keydown', handleEsc);
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    setGalleryImages(shuffleArray(originalGalleryImages));
+  }, []);
 
   return (
     <section id="gallery" className={styles.gallery}>
