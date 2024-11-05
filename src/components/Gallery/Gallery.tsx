@@ -108,7 +108,7 @@ export default function Gallery() {
                 )}
                 <Image
                   src={image}
-                  alt={`Слайд ${index + 1}`}
+                  alt={`Приклад видалення мятин без фарбування ${index + 1}`}
                   className={styles.slider_image}
                   onLoad={() => handleImageLoad(index)}
                   onClick={() => openModal(image)}
@@ -133,7 +133,7 @@ export default function Gallery() {
             <div className={styles.modal_content}>
               <Image
                 src={currentImage}
-                alt="Full size"
+                alt="Зразок виконаних робіт"
                 className={styles.full_image}
                 width={1200}
                 height={1200}

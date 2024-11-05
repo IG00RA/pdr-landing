@@ -43,6 +43,11 @@
     gap: 70px;
     padding: 200px 200px 100px 200px;
   }
+
+  @media (max-height: 529px) {
+    padding-bottom: 20px;
+    gap: 20px;
+  }
 }
 
 .hero_text {
@@ -63,6 +68,10 @@
 
   & span {
     color: var(--second-color);
+  }
+
+  @media (max-height: 529px) {
+    font-size: var(--fs-xlarge);
   }
 }
 
