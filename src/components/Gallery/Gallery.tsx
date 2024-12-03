@@ -8,7 +8,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Icon from '@/helpers/Icon';
-import Image from 'next/image';
 import { galleryImages as originalGalleryImages } from '@/data/mediaData';
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -106,7 +105,7 @@ export default function Gallery() {
                     <Icon name="icon-load" width={35} height={35} />
                   </div>
                 )}
-                <Image
+                <img
                   src={image}
                   alt={`Приклад видалення мятин без фарбування ${index + 1}`}
                   className={styles.slider_image}
@@ -131,7 +130,7 @@ export default function Gallery() {
         {isOpen && (
           <div className={styles.modal} onClick={closeModal}>
             <div className={styles.modal_content}>
-              <Image
+              <img
                 src={currentImage}
                 alt="Зразок виконаних робіт"
                 className={styles.full_image}

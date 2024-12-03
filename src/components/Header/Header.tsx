@@ -1,9 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import styles from './Header.module.css';
-import logo from '../../img/header/logo.webp';
 import Icon from '@/helpers/Icon';
 import MobMenu from '../MobMenu/MobMenu';
 
@@ -25,12 +23,9 @@ export default function Header() {
       <div className={styles.container}>
         <div className={styles.logo_wrap}>
           <a href="/">
-            <Image
+            <img
               className={styles.logo}
-              src={logo}
-              width={0}
-              height={0}
-              sizes="100vw"
+              src="/assets/img/header/logo.webp"
               alt="logo"
             />
           </a>

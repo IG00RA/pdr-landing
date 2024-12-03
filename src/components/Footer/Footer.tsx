@@ -1,6 +1,4 @@
 import styles from './Footer.module.css';
-import Image from 'next/image';
-import logo from '../../img/header/logo.webp';
 import Icon from '@/helpers/Icon';
 
 export default function Footer() {
@@ -9,12 +7,9 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.logo_wrap}>
           <a href="/" aria-label="Home">
-            <Image
+            <img
               className={styles.logo}
-              src={logo}
-              width={0}
-              height={0}
-              sizes="100vw"
+              src="/assets/img/header/logo.webp"
               alt="Dent Center logo"
             />
           </a>

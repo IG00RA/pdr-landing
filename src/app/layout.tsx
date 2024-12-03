@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: 'Видалення Вм’ятин без Фарбування PDR',
     description:
       'Якісне видалення вм’ятин без фарбування у Червонограді. Відновлення авто після граду та ДТП швидко і без покраски.',
-    url: `${process.env.NEXT_PUBLIC_URL}`,
+    url: `https://dent-center.com.ua/`,
     type: 'website',
     images: [
       {
@@ -78,12 +78,8 @@ export const metadata: Metadata = {
       },
     ],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_URL}`,
+    canonical: `https://dent-center.com.ua/`,
   },
 };
 
