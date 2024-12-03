@@ -89,7 +89,7 @@ export default function Footer() {
         <p>© 2024 Червоноград Dent Center. Всі права захищені.</p>
         <a
           className={styles.github_link}
-          href="/privacy"
+          href="/privacy.html"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Privacy Policy"

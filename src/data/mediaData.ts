@@ -58,59 +58,35 @@ export const videoPairs: {
   poster: [string, string];
 }[] = [
   {
-    video: [
-      'https://rozborka.pp.ua/image/video/1.mp4',
-      'https://rozborka.pp.ua/image/video/1-1.mp4',
-    ],
+    video: ['/assets/video/1.mp4', '/assets/video/1-1.mp4'],
     poster: [firstVideoImg.src, firstVideoImg1.src],
   },
   {
-    video: [
-      'https://rozborka.pp.ua/image/video/2.mp4',
-      'https://rozborka.pp.ua/image/video/2-1.mp4',
-    ],
+    video: ['/assets/video/2.mp4', '/assets/video/2-1.mp4'],
     poster: [secondVideoImg.src, secondVideoImg1.src],
   },
   {
-    video: [
-      'https://rozborka.pp.ua/image/video/3.mp4',
-      'https://rozborka.pp.ua/image/video/3-1.mp4',
-    ],
+    video: ['/assets/video/3.mp4', '/assets/video/3-1.mp4'],
     poster: [thirdVideoImg.src, thirdVideoImg1.src],
   },
   {
-    video: [
-      'https://rozborka.pp.ua/image/video/4.mp4',
-      'https://rozborka.pp.ua/image/video/4-1.mp4',
-    ],
+    video: ['/assets/video/4.mp4', '/assets/video/4-1.mp4'],
     poster: [fourthVideoImg.src, fourthVideoImg1.src],
   },
   {
-    video: [
-      'https://rozborka.pp.ua/image/video/5.mp4',
-      'https://rozborka.pp.ua/image/video/5-1.mp4',
-    ],
+    video: ['/assets/video/5.mp4', '/assets/video/5-1.mp4'],
     poster: [fifthVideoImg.src, fifthVideoImg1.src],
   },
   {
-    video: [
-      'https://rozborka.pp.ua/image/video/6.mp4',
-      'https://rozborka.pp.ua/image/video/6-1.mp4',
-    ],
+    video: ['/assets/video/6.mp4', '/assets/video/6-1.mp4'],
     poster: [sixthVideoImg.src, sixthVideoImg1.src],
   },
   {
-    video: [
-      'https://rozborka.pp.ua/image/video/7.mp4',
-      'https://rozborka.pp.ua/image/video/7-1.mp4',
-    ],
+    video: ['/assets/video/7.mp4', '/assets/video/7-1.mp4'],
     poster: [seventhVideoImg.src, seventhVideoImg1.src],
   },
   {
-    video: [
-      'https://rozborka.pp.ua/image/video/8.mp4',
-      'https://rozborka.pp.ua/image/video/8-1.mp4',
-    ],
+    video: ['/assets/video/8.mp4', '/assets/video/8-1.mp4'],
     poster: [eighthVideoImg.src, eighthVideoImg1.src],
   },
 ];
