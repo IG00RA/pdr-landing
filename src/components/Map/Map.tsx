@@ -26,7 +26,7 @@ export default function Map() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                вул. Богдана Хмельницького, 29а, м. Червоноград
+                вул. Богдана Хмельницького, 29а, м. Шептицький (Червоноград)
               </a>
             </li>
             <li>

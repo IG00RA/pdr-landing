@@ -24,7 +24,7 @@ export default function Footer() {
               aria-label="Location on Google Maps"
             >
               <Icon name="icon-location" width={25} height={25} />
-              вул. Богдана Хмельницького, 29а, м. Червоноград
+              вул. Богдана Хмельницького, 29а, м. Шептицький (Червоноград)
             </a>
           </li>
           <li>
@@ -86,7 +86,9 @@ export default function Footer() {
         </ul>
       </div>
       <div className={styles.copyright}>
-        <p>© 2024 Червоноград Dent Center. Всі права захищені.</p>
+        <p>
+          © 2024 Червоноград / Шептицький @dent_center_chg. Всі права захищені.
+        </p>
         <a
           className={styles.github_link}
           href="/privacy.html"
